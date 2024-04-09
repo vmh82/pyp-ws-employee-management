@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "a50e1f75-a25a-4cfd-bd21-b1c74eb9bc5e",
+		"name": "EmployeeManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateEmployee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkJlYXJlciJ9.eyJyb2xlIjoiYWRtaW4iLCJuYmYiOjE3MTI2MDk1NDUsImV4cCI6MTcxMjYxMzE0NSwiaWF0IjoxNzEyNjA5NTQ1fQ.87H8-abuRTvz8Anb6DHcORy5vzBZZBJqN0lmBgPPasM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"firstName\": \"victor \",\r\n  \"lastName\": \"maldonado\",\r\n  \"email\": \"vfmaldonado@outlook.com\",\r\n  \"position\": \"Backedn\",\r\n  \"phone\": \"2666999\",\r\n  \"address\": \"manta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5095/api/v1/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5095",
+					"path": [
+						"api",
+						"v1",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployeeById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkJlYXJlciJ9.eyJyb2xlIjoiYWRtaW4iLCJuYmYiOjE3MTI2MDk1NDUsImV4cCI6MTcxMjYxMzE0NSwiaWF0IjoxNzEyNjA5NTQ1fQ.87H8-abuRTvz8Anb6DHcORy5vzBZZBJqN0lmBgPPasM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5095/api/v1/employee?employeeId=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5095",
+					"path": [
+						"api",
+						"v1",
+						"employee"
+					],
+					"query": [
+						{
+							"key": "employeeId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5093/api/v1/Authorization?roleType=admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5093",
+					"path": [
+						"api",
+						"v1",
+						"Authorization"
+					],
+					"query": [
+						{
+							"key": "roleType",
+							"value": "admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployees",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkJlYXJlciJ9.eyJyb2xlIjoiYWRtaW4iLCJuYmYiOjE3MTI2MDk1NDUsImV4cCI6MTcxMjYxMzE0NSwiaWF0IjoxNzEyNjA5NTQ1fQ.87H8-abuRTvz8Anb6DHcORy5vzBZZBJqN0lmBgPPasM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5095/api/v1/employee/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5095",
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteEmployeeById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkJlYXJlciJ9.eyJyb2xlIjoiYWRtaW4iLCJuYmYiOjE3MTI2MDk1NDUsImV4cCI6MTcxMjYxMzE0NSwiaWF0IjoxNzEyNjA5NTQ1fQ.87H8-abuRTvz8Anb6DHcORy5vzBZZBJqN0lmBgPPasM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5095/api/v1/employee/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5095",
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkJlYXJlciJ9.eyJyb2xlIjoiYWRtaW4iLCJuYmYiOjE3MTI2MDk4NTgsImV4cCI6MTcxMjYxMzQ1OCwiaWF0IjoxNzEyNjA5ODU4fQ.qqvTNnHnfrz0dPvruuGi65xeReabNZ9lGICfoIPSxQU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 5,\r\n  \"firstName\": \"vmaldonado\",\r\n  \"lastName\": \"string\",\r\n  \"email\": \"vfmaldonado@facebook.com\",\r\n  \"position\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"address\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5095/api/v1/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5095",
+					"path": [
+						"api",
+						"v1",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
